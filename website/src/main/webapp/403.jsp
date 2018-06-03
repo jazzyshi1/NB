@@ -55,10 +55,12 @@
 	
 </body>
 <script type="text/javascript">
+	/**
 	$(function() {
 		setTimeout(function() {
 			location.href = '<%=basePath%>';
 		}, 5000);
 	})
+	**/
 </script>
 </html>

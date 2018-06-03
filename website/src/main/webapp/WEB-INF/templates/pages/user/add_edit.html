@@ -62,9 +62,11 @@ layout("/layout/default.html",{"menu":["acl","user_admin"],"breadcrumbs":[{"name
 						<button type="button" class="btn btn-sm btn-primary" onclick="save(this)">
 							<i class="fa fa-save"></i> 提交
 						</button>
-						<button class="btn btn-sm btn-default btn-back">
-							<i class="fa fa-undo"></i> 返回
-						</button>
+						<!--<button class="btn btn-sm btn-default btn-back">-->
+							<!--<i class="fa fa-undo"></i> 返回-->
+						<!--</button>-->
+						<a href="javascript:;" class="btn btn-sm btn-back"> <i class="fa fa-undo"></i> 返回
+						</a>
 					</div>
 				</form>
 			</div>
@@ -85,8 +87,9 @@ layout("/layout/default.html",{"menu":["acl","user_admin"],"breadcrumbs":[{"name
 				}, 'json');
 			} else if ($("input[name='password']").val() === $("input[name='rePassword']").val()) {
 				$.post(Common.getRootPath() + '/user/add', $('#addUserForm').serialize(), function(result) {
+				    console.log("resulr="+result.operationState);
 					if (result.operationState == 'SUCCESS') {
-						location.href = getRootPath() + "/user/list";
+						location.href = Common.getRootPath() + "/user/list";
 					} else {
 						Common.validationFail(result.data.reason, btn);
 					}

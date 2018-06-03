@@ -6,7 +6,7 @@ layout("/layout/default.html",{"menu":["acl","user_admin"],"breadcrumbs":[{"name
 	<div class="col-md-8 col-md-offset-2 col-sm-12">
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">角色授权</h3>
+				<h3 class="panel-title">授权</h3>
 			</div>
 			<div class="panel-body">
 				<div class="col-sm-12">
@@ -25,9 +25,11 @@ layout("/layout/default.html",{"menu":["acl","user_admin"],"breadcrumbs":[{"name
 								<button type="button" class="btn btn-sm btn-primary" onclick="setPermission(this)">
 									<i class="fa fa-save"></i> 提交
 								</button>
-								<button class="btn btn-sm btn-warning  btn-back">
-									<i class="fa fa-undo"></i> 返回
-								</button>
+								<!--<button class="btn btn-sm btn-warning  btn-back">-->
+									<!--<i class="fa fa-undo"></i> 返回-->
+								<!--</button>-->
+								<a href="javascript:;" class="btn btn-sm btn-back"> <i class="fa fa-undo"></i> 返回
+								</a>
 							</div>
 							<input type="hidden" name="id" value="${obj.data.userId!}">
 						</div>
