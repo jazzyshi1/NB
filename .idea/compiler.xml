@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
         <module name="cores" />
+        <module name="home" />
         <module name="important" />
         <module name="website" />
       </profile>
@@ -16,6 +17,7 @@
       <module name="common" target="1.7" />
       <module name="core" target="1.7" />
       <module name="cores" target="1.7" />
+      <module name="home" target="1.7" />
       <module name="important" target="1.7" />
       <module name="system" target="1.7" />
       <module name="website" target="1.7" />

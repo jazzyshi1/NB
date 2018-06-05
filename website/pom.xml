@@ -32,11 +32,6 @@
             <artifactId>nutz</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.jz.snake</groupId>
-            <artifactId>important</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
         </dependency>
@@ -56,6 +51,16 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jz.snake</groupId>
+            <artifactId>important</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jz.snake</groupId>
+            <artifactId>home</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

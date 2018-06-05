@@ -87,10 +87,22 @@
 						</h3>
 					</li>
 
+					<li class="nav-item  ${ menu[0] =='homepage' ?'active open':''}"><a href="javascript:;" class="nav-link nav-toggle"> <i class="icon-users"></i> <span class="title">首页</span>
+						<span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<!--# if(hasPermission('user.list')){ #-->
+							<li class="nav-item  ${ menu[1] =='home_trend' ?'active':''}"><a href="${base!}/home/trend" class="nav-link "> <i class="fa fa-user"></i> <span class="title">态势分析</span>
+							</a></li>
+							<!--# } #-->
+							<!--# if(hasPermission('role.list')){ #-->
+							<li class="nav-item  ${ menu[1] =='home_moniter' ?'active':''}"><a href="${base!}/home/monitor" class="nav-link "><i class="fa fa-lock"></i>  <span class="title">实时监控</span>
+							</a></li>
+							<!--# } #-->
+						</ul>
+					</li>
 
 					<li class="nav-item  ${ menu[0] =='acl' ?'active open':''}"><a href="javascript:;" class="nav-link nav-toggle"> <i class="icon-users"></i> <span class="title">访问控制</span>
-							<span class="arrow"></span>
-					</a>
+							<span class="arrow"></span></a>
 						<ul class="sub-menu">
 							<!--# if(hasPermission('user.list')){ #-->
 							<li class="nav-item  ${ menu[1] =='user_admin' ?'active':''}"><a href="${base!}/user/list" class="nav-link "> <i class="fa fa-user"></i> <span class="title">用户管理</span>
@@ -104,7 +116,8 @@
 							<li class="nav-item  ${ menu[1] =='permission_admin' ?'active':''}"><a href="${base!}/permission/list" class="nav-link "><i class="fa fa-eye"></i>  <span class="title">权限管理</span>
 							</a></li>
 							<!--# } #-->
-						</ul></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>

@@ -10,6 +10,16 @@
           <element id="library" level="project" name="Maven: junit:junit:4.12" />
           <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
           <element id="library" level="project" name="Maven: org.nutz:nutz:1.r.65" />
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.3.0" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
+          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP-java6:2.3.13" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
+          <element id="library" level="project" name="Maven: org.nutz:nutz-integration-quartz:1.r.65" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.10" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
           <element id="archive" name="important-1.0-SNAPSHOT.jar">
             <element id="module-output" name="important" />
           </element>
@@ -32,16 +42,44 @@
           <element id="library" level="project" name="Maven: org.antlr:antlr4-runtime:4.2" />
           <element id="library" level="project" name="Maven: org.abego.treelayout:org.abego.treelayout.core:1.0.1" />
           <element id="library" level="project" name="Maven: org.antlr:antlr4-annotations:4.2" />
-          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.3.0" />
-          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
-          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
-          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP-java6:2.3.13" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
-          <element id="library" level="project" name="Maven: org.nutz:nutz-integration-quartz:1.r.65" />
-          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
-          <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.10" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
-          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
+          <element id="library" level="project" name="Maven: com.thoughtworks.xstream:xstream:1.4.7" />
+          <element id="library" level="project" name="Maven: xmlpull:xmlpull:1.1.3.1" />
+          <element id="library" level="project" name="Maven: xpp3:xpp3_min:1.1.4c" />
+          <element id="library" level="project" name="Maven: org.elasticsearch:elasticsearch:2.3.5" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-core:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-backward-codecs:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-analyzers-common:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queries:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-memory:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-highlighter:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-queryparser:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-sandbox:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-suggest:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-misc:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-join:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-grouping:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial:5.5.0" />
+          <element id="library" level="project" name="Maven: org.apache.lucene:lucene-spatial3d:5.5.0" />
+          <element id="library" level="project" name="Maven: com.spatial4j:spatial4j:0.5" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: org.elasticsearch:securesm:1.0" />
+          <element id="library" level="project" name="Maven: com.carrotsearch:hppc:0.7.1" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.9.4" />
+          <element id="library" level="project" name="Maven: org.joda:joda-convert:1.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.6.6" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.6.6" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.15" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.6.6" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.10.5.Final" />
+          <element id="library" level="project" name="Maven: com.ning:compress-lzf:1.0.2" />
+          <element id="library" level="project" name="Maven: com.tdunning:t-digest:3.0" />
+          <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.6" />
+          <element id="library" level="project" name="Maven: commons-cli:commons-cli:1.3.1" />
+          <element id="library" level="project" name="Maven: com.twitter:jsr166e:1.1.0" />
+          <element id="archive" name="home-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="home" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

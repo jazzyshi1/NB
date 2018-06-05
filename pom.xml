@@ -12,6 +12,7 @@
     <module>website</module>
     <module>important</module>
     <module>common</module>
+    <module>home</module>
   </modules>
 
   <name>system</name>
