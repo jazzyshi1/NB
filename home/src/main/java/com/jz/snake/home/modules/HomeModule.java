@@ -9,6 +9,7 @@ import com.jz.snake.important.shiro.bean.Permission;
 import com.jz.snake.important.shiro.ext.anno.ThunderRequiresPermissions;
 import com.jz.snake.important.shiro.modules.AbstractBaseModule;
 import com.jz.snake.important.shiro.service.Pager;
+import com.jz.snake.important.utils.query.AtomQuery;
 import org.nutz.mvc.adaptor.JsonAdaptor;
 import org.nutz.mvc.annotation.AdaptBy;
 import org.nutz.mvc.annotation.At;
@@ -24,7 +25,7 @@ public class HomeModule extends AbstractBaseModule {
     @Inject
     HomeService homeService;
     /**
-     * 首页
+     * 态势分析
      *
      * @return
      *
@@ -32,8 +33,23 @@ public class HomeModule extends AbstractBaseModule {
      */
     @At
     @AdaptBy(type = JsonAdaptor.class)
-    @Ok("beetl:pages/permission/list.html")
-    public Result homeTrend() {
-        return Result.success().addData("homePage", homeService.getHomePage()).setTitle("态势感知");
+    @Ok("beetl:pages/home/trend.html")
+    @ThunderRequiresPermissions(InstallPermission.HOME_TREND)
+    public Result trend(AtomQuery atomQuery) {
+        return Result.success().addData("homePage", "aa").addData("homeP","bb").setTitle("态势感知");
+    }
+    /**
+     * 实时监测
+     *
+     * @return
+     *
+     * @author jzshi
+     */
+    @At
+    @AdaptBy(type = JsonAdaptor.class)
+    @Ok("beetl:pages/home/monitor.html")
+    @ThunderRequiresPermissions(InstallPermission.HOME_MONITOR)
+    public Result monitor(AtomQuery atomQuery) {
+        return Result.success().addData("homePage", "aa").addData("homeP","bb").setTitle("实时监测");
     }
 }
