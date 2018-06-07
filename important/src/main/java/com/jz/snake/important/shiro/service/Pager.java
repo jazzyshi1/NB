@@ -10,7 +10,7 @@ import org.nutz.json.Json;
 import org.nutz.lang.util.NutMap;
 
 /**
- * @author 王贵源
+ * @author jzshi
  *
  *         create at 2014年9月30日 上午11:21:12
  */

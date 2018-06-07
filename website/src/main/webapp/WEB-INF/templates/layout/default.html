@@ -87,15 +87,15 @@
 						</h3>
 					</li>
 
-					<li class="nav-item  ${ menu[0] =='homepage' ?'active open':''}"><a href="javascript:;" class="nav-link nav-toggle"> <i class="icon-users"></i> <span class="title">首页</span>
+					<li class="nav-item  ${ menu[0] =='home' ?'active open':''}"><a href="javascript:;" class="nav-link nav-toggle"> <i class="icon-pointer"></i> <span class="title">首页</span>
 						<span class="arrow"></span></a>
 						<ul class="sub-menu">
-							<!--# if(hasPermission('user.list')){ #-->
+							<!--# if(hasPermission('home.trend')){ #-->
 							<li class="nav-item  ${ menu[1] =='home_trend' ?'active':''}"><a href="${base!}/home/trend" class="nav-link "> <i class="fa fa-user"></i> <span class="title">态势分析</span>
 							</a></li>
 							<!--# } #-->
-							<!--# if(hasPermission('role.list')){ #-->
-							<li class="nav-item  ${ menu[1] =='home_moniter' ?'active':''}"><a href="${base!}/home/monitor" class="nav-link "><i class="fa fa-lock"></i>  <span class="title">实时监控</span>
+							<!--# if(hasPermission('home.monitor')){ #-->
+							<li class="nav-item  ${ menu[1] =='home_monitor' ?'active':''}"><a href="${base!}/home/monitor" class="nav-link "><i class="fa fa-lock"></i>  <span class="title">实时监控</span>
 							</a></li>
 							<!--# } #-->
 						</ul>

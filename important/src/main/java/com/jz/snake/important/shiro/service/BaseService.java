@@ -27,9 +27,9 @@ import org.nutz.log.Logs;
 import org.nutz.service.IdNameEntityService;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @IocBean(fields = { "dao" })

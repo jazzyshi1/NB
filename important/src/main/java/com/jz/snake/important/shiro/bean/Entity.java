@@ -5,9 +5,9 @@ import org.nutz.json.Json;
 import org.nutz.json.JsonFormat;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class Entity {

@@ -13,9 +13,9 @@ import org.nutz.mvc.annotation.Param;
 
 /**
  * 
- * @author 王贵源
+ * @author jzshi
  *
- * @email kerbores@kerbores.com
+ * @email jz_shi@163.com
  *
  * @description 权限控制器
  * 
@@ -46,7 +46,7 @@ public class PermissionModule extends AbstractBaseModule {
 	 * @param page
 	 * @return
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	@At
 	@Ok("beetl:pages/permission/list.html")

@@ -8,9 +8,9 @@ import org.nutz.mvc.Mvcs;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class ConfigFun implements Function {

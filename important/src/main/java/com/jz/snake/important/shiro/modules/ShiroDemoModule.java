@@ -14,9 +14,9 @@ import org.nutz.mvc.annotation.At;
 
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @At("shiro")

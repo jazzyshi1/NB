@@ -2,9 +2,9 @@ package com.jz.snake.important.shiro;
 
 /**
  * 
- * @author Ixion
+ * @author jzshi
  *
- *         操作状态枚举 create at 2014年8月22日
+ *         操作状态枚举 create at 2018年6月7日
  */
 public enum OperationState {
 	/**

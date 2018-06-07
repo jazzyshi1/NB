@@ -4,6 +4,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.google.inject.AbstractModule;
 import com.jz.snake.important.shiro.DES;
 import com.jz.snake.important.shiro.Result;
 import com.jz.snake.important.shiro.service.imp.ShiroUserService;
@@ -22,36 +23,17 @@ import org.nutz.mvc.annotation.POST;
 import org.nutz.mvc.annotation.Param;
 import com.jz.snake.important.shiro.ShiroDemo.SessionKeys;
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @At("system")
 @IocBean
-public class SystemModule {
+public class SystemModule extends AbstractBaseModule{
 
 	@Inject
 	ShiroUserService shiroUserService;
-
-	protected void _addCookie(String name, String value, int age) {
-		Cookie cookie = new Cookie(name, value);
-		cookie.setPath("/");
-		cookie.setMaxAge(age);
-		Mvcs.getResp().addCookie(cookie);
-	}
-
-	protected String _getCookie(String name) {
-		Cookie[] cookies = Mvcs.getActionContext().getRequest().getCookies();
-		if (cookies != null) {
-			for (Cookie cookie : cookies) {
-				if (Strings.equals(cookie.getName(), name)) {
-					return cookie.getValue();
-				}
-			}
-		}
-		return null;
-	}
 
 	@At
 	@POST
@@ -67,11 +49,11 @@ public class SystemModule {
 				data.put("user", user);
 				data.put("password", password);
 				data.put("rememberMe", rememberMe);
-				_addCookie("kerbores", DES.encrypt(Json.toJson(data)), 24 * 60 * 60 * 365);
+				_addCookie("jzsnake", DES.encrypt(Json.toJson(data)), 24 * 60 * 60 * 365);
 			}
 			return null;
 		}
-		String cookie = _getCookie("kerbores");
+		String cookie = _getCookie("jzsnake");
 		NutMap data = NutMap.NEW();
 		if (!Strings.isBlank(cookie)) {
 			data = Lang.map(DES.decrypt(cookie));
@@ -87,4 +69,5 @@ public class SystemModule {
 		SecurityUtils.getSubject().logout();
 		return Result.success();
 	}
+
 }

@@ -23,9 +23,9 @@ import org.apache.shiro.authz.aop.PermissionAnnotationMethodInterceptor;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class ThunderPermissionAnnotationMethodInterceptor extends PermissionAnnotationMethodInterceptor {

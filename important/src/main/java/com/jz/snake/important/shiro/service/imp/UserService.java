@@ -17,9 +17,9 @@ import org.nutz.lang.Strings;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class UserService extends BaseService<User> {
@@ -49,7 +49,7 @@ public class UserService extends BaseService<User> {
 	}
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 * @return
 	 */
@@ -60,7 +60,7 @@ public class UserService extends BaseService<User> {
 	}
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 * @return
 	 */
@@ -71,7 +71,7 @@ public class UserService extends BaseService<User> {
 	}
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param ids
 	 * @param userId
 	 * @return
@@ -106,7 +106,7 @@ public class UserService extends BaseService<User> {
 	}
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param ids
 	 * @param userId
 	 * @return

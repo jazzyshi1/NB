@@ -7,9 +7,9 @@ import org.nutz.dao.entity.annotation.Table;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @Table("t_role")

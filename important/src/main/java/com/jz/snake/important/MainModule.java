@@ -29,64 +29,54 @@ import org.nutz.mvc.annotation.Views;
 import org.nutz.mvc.ioc.provider.ComboIocProvider;
 
 /**
- * @author admin
- *
- * @email kerbores@gmail.com
- *
+ * @author jzshi
+ * @email jz_shi@163.com
  */
 @IocBean
 @Ok("json")
 @Fail("http:500")
 @SetupBy(MainSetup.class) // 启动
-@Modules(scanPackage = true, packages="com.jz.snake")
-@Views({ BeetlViewMaker.class }) // beetl
+@Modules(scanPackage = true, packages = "com.jz.snake")
+@Views({BeetlViewMaker.class}) // beetl
 @SessionBy(ShiroSessionProvider.class)
 @Encoding(input = "UTF-8", output = "UTF-8")
 @ChainBy(type = MainChainMaker.class, args = {}) // 自定义shiro注解处理器
 @IocBy(type = ComboIocProvider.class, args = {
-								"*anno", "com.jz.snake",
-								"*tx",
-								"*js", "ioc/",
-								"*async" })
+        "*anno", "com.jz.snake",
+        "*tx",
+        "*js", "ioc/",
+        "*async"})
 public class MainModule {
 
-	@At
-	@NutzRequiresPermissions(value = "admin", name = "a", tag = "b")
-	public Result index() {
-		return Result.success();
-	}
+    @At("/")
+    @Ok("re:beetl:pages/login.html")
+    public String home(HttpServletRequest request, @Attr(ShiroDemo.SessionKeys.USER_KEY) User user) {
+        if (user != null) {
+            return ">>:/user/list";
+        }
+        String cookie = _getCookie("jzsnake");
+        NutMap data = NutMap.NEW();
+        if (!Strings.isBlank(cookie)) {
+            data = Lang.map(DES.decrypt(cookie));
+        }
+        request.setAttribute("loginInfo", data);
+        return null;
+    }
 
-	protected String _getCookie(String name) {
-		Cookie[] cookies = Mvcs.getActionContext().getRequest().getCookies();
-		if (cookies != null) {
-			for (Cookie cookie : cookies) {
-				if (Strings.equals(cookie.getName(), name)) {
-					return cookie.getValue();
-				}
-			}
-		}
-		return null;
-	}
-
-	@At("/")
-	@Ok("re:beetl:pages/login.html")
-	public String home(HttpServletRequest request, @Attr(ShiroDemo.SessionKeys.USER_KEY) User user) {
-		if (user != null) {
-			return ">>:/user/list";
-		}
-		String cookie = _getCookie("kerbores");
-		NutMap data = NutMap.NEW();
-		if (!Strings.isBlank(cookie)) {
-			data = Lang.map(DES.decrypt(cookie));
-		}
-		request.setAttribute("loginInfo", data);
-		return null;
-	}
-
-	@At
-	@Ok("beetl:pages/test.html")
-	public NutMap test() {
-		return NutMap.NEW();
-	}
-
+    /**
+     * 获取缓存数据
+     * @param name
+     * @return
+     */
+    protected String _getCookie(String name) {
+        Cookie[] cookies = Mvcs.getActionContext().getRequest().getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (Strings.equals(cookie.getName(), name)) {
+                    return cookie.getValue();
+                }
+            }
+        }
+        return null;
+    }
 }

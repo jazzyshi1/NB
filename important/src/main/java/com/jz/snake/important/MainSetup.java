@@ -23,14 +23,15 @@ import org.nutz.mvc.NutConfig;
 import org.nutz.mvc.Setup;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class MainSetup implements Setup {
 	private static final Log log = Logs.get();
-	Role admin;
+	private static final String  PACKAGE_NAME = "com.jz.snake";
+	Role adminRole;
 
 	/*
 	 * (non-Javadoc)
@@ -57,13 +58,12 @@ public class MainSetup implements Setup {
 		}
 
 		Ioc ioc = nc.getIoc();
-
 		Dao dao = ioc.get(Dao.class);
 		Daos.FORCE_WRAP_COLUMN_NAME = true;
 
 		// 创建和修改数据表
-		Daos.createTablesInPackage(dao, User.class, false);
-		Daos.migration(dao, User.class, true, true);
+		Daos.createTablesInPackage(dao, PACKAGE_NAME, false);
+		Daos.migration(dao, PACKAGE_NAME, true, true);
 
 		final UserService userService = ioc.get(UserService.class);
 		final RoleService roleService = ioc.get(RoleService.class);
@@ -84,17 +84,15 @@ public class MainSetup implements Setup {
 			}
 		});
 
-		admin = roleService.fetch(Cnd.where("name", "=", InstalledRole.SU.getName()));
-
-		if (admin == null) {// 这里理论上是进不来的,防止万一吧
-			admin = new Role();
-			admin.setName(InstalledRole.SU.getName());
-			admin.setDescription(InstalledRole.SU.getDescription());
-			admin = roleService.save(admin);
+		adminRole = roleService.fetch(Cnd.where("name", "=", InstalledRole.SU.getName()));
+		if (adminRole == null) {// 这里理论上是进不来的,防止万一吧
+			adminRole = new Role();
+			adminRole.setName(InstalledRole.SU.getName());
+			adminRole.setDescription(InstalledRole.SU.getDescription());
+			adminRole = roleService.save(adminRole);
 		}
 
 		Lang.each(InstallPermission.values(), new Each<InstallPermission>() {// 内置权限
-
 			@Override
 			public void invoke(int index, InstallPermission permission, int length) throws ExitLoop, ContinueLoop, LoopException {
 				Permission temp = null;
@@ -104,11 +102,10 @@ public class MainSetup implements Setup {
 					temp.setDescription(permission.getDescription());
 					temp = permissionService.save(temp);
 				}
-
 				// 给SU授权
-				if (rolePermissionService.fetch(Cnd.where("permissionId", "=", temp.getId()).and("roleId", "=", admin.getId())) == null) {
+				if (rolePermissionService.fetch(Cnd.where("permissionId", "=", temp.getId()).and("roleId", "=", adminRole.getId())) == null) {
 					RolePermission rp = new RolePermission();
-					rp.setRoleId(admin.getId());
+					rp.setRoleId(adminRole.getId());
 					rp.setPermissionId(temp.getId());
 					rolePermissionService.save(rp);
 				}
@@ -118,22 +115,25 @@ public class MainSetup implements Setup {
 		User surperMan = null;
 		if ((surperMan = userService.fetch(Cnd.where("name", "=", "admin"))) == null) {
 			surperMan = new User();
-			surperMan.setEmail("kerbores@zhcs.club");
+			surperMan.setEmail("jz_shi@163.com");
 			surperMan.setName("admin");
 			surperMan.setPassword(Lang.md5("123456"));
-			surperMan.setPhone("18996359755");
-			surperMan.setRealName("王贵源");
+			surperMan.setPhone("18888888888");
+			surperMan.setRealName("史继卓");
 			surperMan.setStatus(User.Status.ACTIVED);
 			surperMan = userService.save(surperMan);
 		}
 
 		UserRole ur = null;
-		if ((ur = userRoleService.fetch(Cnd.where("userId", "=", surperMan.getId()).and("roleId", "=", admin.getId()))) == null) {
+		if ((ur = userRoleService.fetch(Cnd.where("userId", "=", surperMan.getId()).and("roleId", "=", adminRole.getId()))) == null) {
 			ur = new UserRole();
 			ur.setUserId(surperMan.getId());
-			ur.setRoleId(admin.getId());
+			ur.setRoleId(adminRole.getId());
 			userRoleService.save(ur);
 		}
+
+		//定时任务相关 监听程序相关
+
 	}
 
 }

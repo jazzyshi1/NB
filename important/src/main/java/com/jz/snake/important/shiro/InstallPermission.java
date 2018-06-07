@@ -2,9 +2,9 @@ package com.jz.snake.important.shiro;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public enum InstallPermission {

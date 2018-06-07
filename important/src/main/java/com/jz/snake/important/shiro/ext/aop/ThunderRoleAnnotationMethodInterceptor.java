@@ -5,9 +5,9 @@ import org.apache.shiro.authz.aop.RoleAnnotationMethodInterceptor;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class ThunderRoleAnnotationMethodInterceptor extends RoleAnnotationMethodInterceptor {

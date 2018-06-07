@@ -22,7 +22,7 @@ import org.nutz.mvc.view.UTF8JsonView;
  * 
  * 提供controller的数据封装统标准操作
  * 
- * @author Kerbores <br>
+ * @author jzshi <br>
  *         每个模块只需要继承此模块，配置@At和@Fail即可
  * 
  * @Fail 建议直接放到统一的处理view进行处理 @Fail("jsp:jsp.exception.exception")

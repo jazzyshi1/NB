@@ -11,9 +11,9 @@ import org.nutz.lang.Times;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @Table("t_user")
@@ -22,9 +22,9 @@ public class User extends Entity {
 
 	/**
 	 * 
-	 * @author 王贵源
+	 * @author jzshi
 	 *
-	 * @email kerbores@kerbores.com
+	 * @email jz_shi@163.com
 	 *
 	 * @description 用户状态枚举
 	 * 
@@ -56,7 +56,7 @@ public class User extends Entity {
 	/**
 	 * 用户类型
 	 * 
-	 * @author 王贵源<kerbores>
+	 * @author jzshi<kerbores>
 	 *
 	 *         create at 2016年1月11日 下午3:55:01
 	 */

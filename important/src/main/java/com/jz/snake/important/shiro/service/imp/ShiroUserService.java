@@ -25,9 +25,9 @@ import org.nutz.log.Logs;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @IocBean
@@ -51,7 +51,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 用户是否有参数权限的标识
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public boolean checkPermission(String permission, int id) {
 
@@ -72,7 +72,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 用户是否有参数角色的标识
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public boolean checkRole(String role, int id) {
 		for (String r : getRolesInfo(id)) {
@@ -90,7 +90,7 @@ public class ShiroUserService {
 	 *            用户名
 	 * @return 用户
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public User findByName(String userName) {
 		return userService.fetch(userName);
@@ -103,7 +103,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 权限列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<Permission> getAllPermissions(int id) {
 		return permissionService.getAllPermissionsByUserId(id);
@@ -116,7 +116,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 权限名称列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<String> getAllPermissionsInfo(int id) {
 		List<Permission> permissions = getAllPermissions(id);
@@ -138,7 +138,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 角色列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<Role> getAllRoles(int id) {
 		// XXX 直接权限即全部权限
@@ -152,7 +152,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 角色列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<Role> getDirectRoles(int id) {
 		return roleService.listByUserId(id);
@@ -167,7 +167,7 @@ public class ShiroUserService {
 	 *            用户类型
 	 * @return 角色列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<Role> getIndirectRoles(int id, Type type) {
 		return new ArrayList<Role>();
@@ -180,7 +180,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 权限列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<Permission> getMenuPermissions(int id) {
 		List<Permission> permissions = getAllPermissions(id);
@@ -204,7 +204,7 @@ public class ShiroUserService {
 	 *            用户 id
 	 * @return 角色名称列表
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public List<String> getRolesInfo(int id) {
 		final List<String> roles = new ArrayList<String>();
@@ -227,7 +227,7 @@ public class ShiroUserService {
 	 *            密码
 	 * @return 登录结果
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	public Result login(String userName, String password) {
 		try {

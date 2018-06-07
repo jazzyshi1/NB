@@ -6,9 +6,9 @@ import org.beetl.core.Function;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class ShiroRoleFunction implements Function {

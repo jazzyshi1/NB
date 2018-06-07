@@ -16,9 +16,9 @@ import org.nutz.lang.Lang;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class RoleService extends BaseService<Role> {
@@ -27,7 +27,7 @@ public class RoleService extends BaseService<Role> {
 	RolePermissionService rolePermissionService;
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 * @return
 	 */
@@ -40,7 +40,7 @@ public class RoleService extends BaseService<Role> {
 	/**
 	 * 用户的全部角色
 	 * 
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 *            用户id
 	 * @return 用户的角色列表
@@ -52,7 +52,7 @@ public class RoleService extends BaseService<Role> {
 	}
 
 	/**
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param ids
 	 * @param roleId
 	 * @return

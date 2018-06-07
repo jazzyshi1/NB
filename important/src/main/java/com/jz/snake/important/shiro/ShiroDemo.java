@@ -4,9 +4,9 @@ import org.nutz.ioc.impl.PropertiesProxy;
 import org.nutz.mvc.Mvcs;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class ShiroDemo {
@@ -16,8 +16,8 @@ public class ShiroDemo {
 		/**
 		 * 用戶在session中保存的key
 		 */
-		public static final String USER_KEY = "KERBORES_USER";
-		public static final String WECHAT_USER_KEY = "KERBORES_WECHAT_USER";
+		public static final String USER_KEY = "JZSHI_USER";
+		public static final String WECHAT_USER_KEY = "JZSHI_WECHAT_USER";
 	}
 
 	public static String config(String key) {

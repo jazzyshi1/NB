@@ -1,7 +1,7 @@
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 package com.jz.snake.important.shiro.ext.anno;

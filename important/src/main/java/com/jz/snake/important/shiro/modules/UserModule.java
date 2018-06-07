@@ -20,7 +20,7 @@ import org.nutz.mvc.annotation.Param;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author jzshi(kerbores@gmail.com)
  *
  * @project thunder-web
  *

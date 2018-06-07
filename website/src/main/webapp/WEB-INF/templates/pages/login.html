@@ -49,7 +49,7 @@
 			<div class="col-md-6 login-container bs-reset">
 				<div class="login-content">
 					<h1>${config("application.name")}</h1>
-					<p>演示shiro集成</p>
+					<p>秉承历史 继续卓越</p>
 					<form action="${base!}/system/login" class="login-form" method="post">
 						<div class="row">
 							<div class="col-xs-6">
@@ -63,7 +63,7 @@
 							<div class="col-sm-4">
 								<div class="rem-password">
 									<p>
-										记住我 <input type="checkbox" value="true" name="rememberMe" class="rem-checkbox" id="rememberMeCheckBox" ${null != loginInfo.rememberMe && loginInfo.rememberMe == true ? 'checked' : '' } />
+										记住我<input type="checkbox" value="false" name="rememberMe" class="rem-checkbox" id="rememberMeCheckBox" ${loginInfo.rememberMe != true ? '' : 'checked' } />
 									</p>
 								</div>
 							</div>
@@ -158,7 +158,9 @@
 				LOGIN.toLogin();
 			}).on('click', '#login-btn', function() {
 				LOGIN.doLogin();
-			});
+			}).on('click', '#rememberMeCheckBox', function() {
+                LOGIN.changeRemeber();
+            });
 		})
 		var LOGIN = {
 			refreshCaptcha : function() { //刷新验证码
@@ -166,6 +168,9 @@
 			},
 			doLogin : function() { //登录
 				if ($('.login-form').validation()) {
+                    if($("input[type='checkbox']").is(':checked')) {
+                        $("input[type='checkbox']").attr('value', "true")
+                    }
 					$('.login-form').submit();
 				} else {
 					return false;

@@ -7,9 +7,9 @@ import org.beetl.core.Function;
 import org.nutz.lang.Lang;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class SubjectFunction implements Function {

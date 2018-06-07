@@ -18,9 +18,9 @@ import org.nutz.mvc.annotation.Param;
 
 /**
  * 
- * @author 王贵源
+ * @author jzshi
  *
- * @email kerbores@kerbores.com
+ * @email jz_shi@163.com
  *
  * @description 角色控制器
  * 
@@ -111,7 +111,7 @@ public class RoleModule extends AbstractBaseModule {
 	 * @param id
 	 * @return
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	@At("/grant/*")
 	@GET
@@ -129,7 +129,7 @@ public class RoleModule extends AbstractBaseModule {
 	 * @param roleId
 	 * @return
 	 *
-	 * @author 王贵源
+	 * @author jzshi
 	 */
 	@At
 	@POST

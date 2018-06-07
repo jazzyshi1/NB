@@ -10,9 +10,9 @@ import org.nutz.dao.sql.Sql;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class PermissionService extends BaseService<Permission> {
@@ -20,7 +20,7 @@ public class PermissionService extends BaseService<Permission> {
 	/**
 	 * 用户的全部权限
 	 * 
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 *            用户id
 	 * @return
@@ -34,7 +34,7 @@ public class PermissionService extends BaseService<Permission> {
 	/**
 	 * 获取用户的直接权限
 	 * 
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 *            用户id
 	 * @return 角色列表
@@ -48,7 +48,7 @@ public class PermissionService extends BaseService<Permission> {
 	/**
 	 * 获取用户的间接权限
 	 * 
-	 * @author 王贵源
+	 * @author jzshi
 	 * @param id
 	 *            用户id
 	 * @return 角色列表

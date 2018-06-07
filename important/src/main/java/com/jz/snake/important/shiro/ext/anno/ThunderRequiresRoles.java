@@ -10,9 +10,9 @@ import org.apache.shiro.authz.annotation.Logical;
 
 /**
  * 
- * @author kerbores
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 @Target({ ElementType.TYPE, ElementType.METHOD })

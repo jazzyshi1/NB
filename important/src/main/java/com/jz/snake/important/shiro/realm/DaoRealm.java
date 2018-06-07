@@ -18,9 +18,9 @@ import org.nutz.lang.Lang;
 import org.nutz.mvc.Mvcs;
 
 /**
- * @author admin
+ * @author jzshi
  *
- * @email kerbores@gmail.com
+ * @email jz_shi@163.com
  *
  */
 public class DaoRealm extends AuthorizingRealm {
