@@ -32,20 +32,20 @@ import org.nutz.mvc.ioc.provider.ComboIocProvider;
  * @author jzshi
  * @email jz_shi@163.com
  */
-@IocBean
 @Ok("json")
 @Fail("http:500")
-@SetupBy(MainSetup.class) // 启动
 @Modules(scanPackage = true, packages = "com.jz.snake")
+@IocBy(type = ComboIocProvider.class, args = {
+        "*js", "ioc/",
+        "*anno", "com.jz.snake",
+        "*tx",
+        "*jedis", // 加载jedis
+        "*async"})
+@SetupBy(MainSetup.class) // 启动
 @Views({BeetlViewMaker.class}) // beetl
 @SessionBy(ShiroSessionProvider.class)
 @Encoding(input = "UTF-8", output = "UTF-8")
 @ChainBy(type = MainChainMaker.class, args = {}) // 自定义shiro注解处理器
-@IocBy(type = ComboIocProvider.class, args = {
-        "*anno", "com.jz.snake",
-        "*tx",
-        "*js", "ioc/",
-        "*async"})
 public class MainModule {
 
     @At("/")

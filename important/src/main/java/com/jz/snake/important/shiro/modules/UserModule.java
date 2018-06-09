@@ -8,6 +8,7 @@ import com.jz.snake.important.shiro.bean.User;
 import com.jz.snake.important.shiro.ext.anno.ThunderRequiresPermissions;
 import com.jz.snake.important.shiro.service.Pager;
 import com.jz.snake.important.shiro.service.imp.UserService;
+import net.sf.ehcache.CacheManager;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.nutz.dao.entity.Record;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -36,7 +37,6 @@ public class UserModule extends AbstractBaseModule {
 
 	@Inject
 	UserService userService;
-
 	/*
 	 * (non-Javadoc)
 	 * 

@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import com.google.inject.Inject;
 import com.jz.snake.important.shiro.bean.Permission;
 import com.jz.snake.important.shiro.service.BaseService;
+import net.sf.ehcache.CacheManager;
 import org.nutz.dao.sql.Sql;
 
 /**

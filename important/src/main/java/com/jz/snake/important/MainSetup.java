@@ -6,11 +6,13 @@ import com.jz.snake.important.shiro.InstallPermission;
 import com.jz.snake.important.shiro.InstalledRole;
 import com.jz.snake.important.shiro.bean.*;
 import com.jz.snake.important.shiro.service.imp.*;
+import net.sf.ehcache.CacheManager;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.dao.util.Daos;
 import org.nutz.integration.shiro.NutShiro;
 import org.nutz.ioc.Ioc;
+import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.lang.ContinueLoop;
 import org.nutz.lang.Each;
 import org.nutz.lang.Encoding;
@@ -131,9 +133,6 @@ public class MainSetup implements Setup {
 			ur.setRoleId(adminRole.getId());
 			userRoleService.save(ur);
 		}
-
-		//定时任务相关 监听程序相关
-
 	}
 
 }
